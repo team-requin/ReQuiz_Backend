@@ -9,5 +9,7 @@ class Router:
             self.init_app(app)
 
     def init_app(self, app):
-        from app.views.api.v1.user.auth import register
+        from app.views.api.v1.user.auth import register, login, access
         app.register_blueprint(register.api.blueprint)
+        app.register_blueprint(login.api.blueprint)
+        app.register_blueprint(access.api.blueprint)

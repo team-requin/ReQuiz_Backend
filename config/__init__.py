@@ -1,4 +1,4 @@
-class LocalLevelConfig:
+class Config:
     SERVICE_NAME = 'ReQUIZ'
 
     _LOCALHOST = '127.0.0.1'
@@ -12,10 +12,10 @@ class LocalLevelConfig:
     MONGO_ID = ''
     MONGO_PW = ''
 
-    SQL_HOST = _LOCALHOST
-    SQL_PORT = 27017
-    SQL_ID = None
-    SQL_PW = None
+    # SQL_HOST = _LOCALHOST
+    # SQL_PORT = 27017
+    # SQL_ID = None
+    # SQL_PW = None
 
     SECRET_KEY = 'THISISSECRETKEY'
 
