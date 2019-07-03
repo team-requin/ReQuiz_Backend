@@ -13,9 +13,9 @@ class LocalLevelConfig:
     MONGO_PW = ''
 
     SQL_HOST = _LOCALHOST
-    SQL_PORT = ''
-    SQL_ID = ''
-    SQL_PW = ''
+    SQL_PORT = 27017
+    SQL_ID = None
+    SQL_PW = None
 
     SECRET_KEY = 'THISISSECRETKEY'
 
@@ -25,7 +25,7 @@ class LocalLevelConfig:
         'debug': DEBUG,
     }
 
-    MONGO_DB_SETTINGS = {
+    MONGODB_SETTINGS = {
         'db': SERVICE_NAME,
         'host': MONGO_HOST,
         'port': MONGO_PORT,
