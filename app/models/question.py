@@ -1,8 +1,10 @@
 from mongoengine import *
 
-class QuestionModela(Document):
+class QuestionModel(Document):
     id = StringField(primary_key=True)
-    question = ListField(
-        StringField(),
+    uuid = StringField()
+    question = DictField(
+        q = StringField(),
+        a = StringField(),
         null=True
     )

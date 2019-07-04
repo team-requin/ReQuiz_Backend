@@ -13,3 +13,6 @@ class Router:
         app.register_blueprint(register.api.blueprint)
         app.register_blueprint(login.api.blueprint)
         app.register_blueprint(access.api.blueprint)
+
+        from app.views.api.v1.user.service import createlist
+        app.register_blueprint(createlist.api.blueprint)

@@ -1,6 +1,7 @@
 from flask import Blueprint, abort, request
 from flask_restful import Api
 from flask_jwt_extended import jwt_required, get_jwt_identity
+import random
 
 from app.views import BaseResource
 from app.models.user import UserModel
@@ -13,6 +14,7 @@ api = Api(blueprint)
 class CreateListManagement(BaseResource):
     @jwt_required
     def post(self):
+
         user_identity = get_jwt_identity()
 
         user = UserModel.objects(id=user_identity).first()
@@ -20,11 +22,14 @@ class CreateListManagement(BaseResource):
         if user is None:
             abort(406)
 
-        question = request.json['question']
+        uuid = str(random.randrange(11111,99999))
+
+        print(uuid)
 
         QuestionModel(
-            id = user,
-            question = question,
+            id = user_identity,
+            uuid = uuid,
+            question = None,
         ).save()
 
         return '', 201
