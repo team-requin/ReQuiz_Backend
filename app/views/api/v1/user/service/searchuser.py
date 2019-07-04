@@ -3,6 +3,7 @@ from flask_restful import Api
 
 from app.views import BaseResource
 from app.models.user import UserModel
+from app.models.question import QuestionModel
 
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
@@ -20,4 +21,12 @@ class UserSearchManagement(BaseResource):
         if user is None:
             abort(406)
 
-        return '', 201
+        QList = QuestionModel.objects(user=search_user).all()
+        OList = []
+
+        for q in QList:
+            OList.append(q['uuid'])
+
+        return {
+            'uuid': ", ".join(OList)
+               }, 201
