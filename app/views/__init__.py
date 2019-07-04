@@ -14,6 +14,10 @@ class Router:
         app.register_blueprint(login.api.blueprint)
         app.register_blueprint(access.api.blueprint)
 
+        from app.views.api.v1.user.auth import checksameaccount, checksamename
+        app.register_blueprint(checksamename.api.blueprint)
+        app.register_blueprint(checksameaccount.api.blueprint)
+
         from app.views.api.v1.user.service import createlist, updatelist, searchuser
         app.register_blueprint(createlist.api.blueprint)
         app.register_blueprint(searchuser.api.blueprint)
