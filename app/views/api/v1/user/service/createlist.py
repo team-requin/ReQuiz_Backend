@@ -27,8 +27,9 @@ class CreateListManagement(BaseResource):
         print(uuid)
 
         QuestionModel(
-            id = user_identity,
+            gar = uuid,
             uuid = uuid,
+            user = user_identity,
             question = None,
         ).save()
 
