@@ -7,7 +7,6 @@ from app.views import BaseResource
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
 
-
 @api.resource('/auth/samename')
 class CheckAccountNameManagement(BaseResource):
     def post(self):

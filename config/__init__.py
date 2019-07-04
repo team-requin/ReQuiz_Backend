@@ -33,3 +33,23 @@ class Config:
         'password': MONGO_PW,
     }
 
+    SWAGGER = {
+        'title': 'DOCS',
+        'specs_route': '/swaggerdocs',
+        'uiversion': 3,
+
+        'info': {
+            'title': 'Requiz docs',
+            'version': 'Beta',
+            'description': ''
+        },
+
+        'host': '0.0.0.0',
+        'basePath': '/ '
+    }
+
+    template = {
+        'schemes': [
+            'http'
+        ]
+    }

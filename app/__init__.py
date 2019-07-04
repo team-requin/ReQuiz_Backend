@@ -2,8 +2,10 @@ from flask import Flask
 from mongoengine import *
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
+from flasgger import Swagger
 
 from app.views import Router
+from config import Config
 
 def create_app(*config_cls):
     flask_app = Flask(__name__)
@@ -16,6 +18,9 @@ def create_app(*config_cls):
     CORS(flask_app, resources={
         r"*": {"origin": "*"},
     })
+
+    swagger = Swagger(template=Config.template)
+    swagger.init_app(flask_app)
 
     JWTManager().init_app(flask_app)
     Router().init_app(flask_app)
