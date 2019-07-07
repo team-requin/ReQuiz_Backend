@@ -5,7 +5,7 @@ class Config:
 
     HOST = '0.0.0.0'
     PORT = 80
-    DEBUG = True
+    DEBUG = False
 
     MONGO_HOST = _LOCALHOST
     MONGO_PORT = ''

@@ -26,7 +26,14 @@ class CreateListManagement(BaseResource):
         if user is None:
             abort(406)
 
-        uuid = str(random.randrange(11111,99999))
+        while True:
+            uuid = str(random.randrange(11111,99999))
+
+            check_uuid = QuestionModel.objects(uuid=uuid).first()
+
+            if check_uuid is None:
+                break
+
 
         print(uuid)
 
