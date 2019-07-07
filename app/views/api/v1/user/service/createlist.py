@@ -17,8 +17,9 @@ class CreateListManagement(BaseResource):
     @jwt_required
     @swag_from(CREATE_Q_POST)
     def post(self):
-
         user_identity = get_jwt_identity()
+
+        quest_name = request.json['quest_name']
 
         user = UserModel.objects(id=user_identity).first()
 
@@ -32,6 +33,7 @@ class CreateListManagement(BaseResource):
         QuestionModel(
             gar = uuid,
             uuid = uuid,
+            name = quest_name,
             user = user_identity,
             question = None,
         ).save()

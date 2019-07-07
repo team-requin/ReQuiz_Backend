@@ -32,7 +32,7 @@ class UserSearchManagement(BaseResource):
         for q in QList:
             uuid_name_List.append((q['uuid'], q['name']))
 
-        Return_Str = jsonify(
+        Return_Str = str(
             {
                 'user': {
                     'id': user['id'],
@@ -41,22 +41,21 @@ class UserSearchManagement(BaseResource):
             },
         )
 
-        while 1:
-            if uuid_name_List is None:
+        Return_Str = Return_Str + str(' workbook : ')
+
+        while True:
+            if not uuid_name_List:
                 break
             else:
-                Return_Str = Return_Str + jsonify(
+                Return_Str = Return_Str + str(
                     {
-                        'workbook': {
-                            a : {
-                                'name': uuid_name_List[a][1],
-                                'uuid': uuid_name_List[a][0],
-                            },
-                        }
-                    },
+                        a : {
+                            'name': uuid_name_List[0][1],
+                            'uuid': uuid_name_List[0][0],
+                        },
+                    }
                 )
+            del uuid_name_List[0]
             a += 1
 
-        return {
-            Return_Str
-        }
+        return jsonify(Return_Str)
