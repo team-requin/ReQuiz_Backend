@@ -1,4 +1,4 @@
-from flask import Blueprint, request, abort
+from flask import Blueprint, request, abort, jsonify
 from flask_restful import Api
 from flasgger import swag_from
 
@@ -10,11 +10,8 @@ from app.models.question import QuestionModel
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
 
-@api.resource('/service/searchuser')
+@api.resource('/service/search_user')
 class UserSearchManagement(BaseResource):
-    def hello(self):
-        return 'hello'
-
     @swag_from(SEARCH_USER_POST)
     def post(self):
         '''
@@ -28,50 +25,38 @@ class UserSearchManagement(BaseResource):
             abort(406)
 
         QList = QuestionModel.objects(user=search_user).all()
-        uuid_name_List = []
 
+        uuid_name_List = []
+        a = 0
 
         for q in QList:
             uuid_name_List.append((q['uuid'], q['name']))
 
-        while 1:
-            if q is not None:
+        Return_Str = jsonify(
+            {
+                'user': {
+                    'id': user['id'],
+                    'name': user['name'],
+                }
+            },
+        )
 
+        while 1:
+            if uuid_name_List is None:
+                break
+            else:
+                Return_Str = Return_Str + jsonify(
+                    {
+                        'workbook': {
+                            a : {
+                                'name': uuid_name_List[a][1],
+                                'uuid': uuid_name_List[a][0],
+                            },
+                        }
+                    },
+                )
+            a += 1
 
         return {
-            'user': {
-                'id': user['id'],
-                'name': user['name'],
-            },
-                'workbook': {
-                '1': {
-                    'name': uuid_name_List[0][1],
-                    'uuid': uuid_name_List[0][0],
-                },
-            }
-        } if q is not None else {
-            'WTF':'WTWTF!'
+            Return_Str
         }
-
-
-        # def mk_json():
-        #     return 'hello'
-        #
-        # return mk_json()
-
-        # return {
-        #     'user': {
-        #         'id': user['id'],
-        #         'name': user['name'],
-        #     },
-        #     'workbook': {
-        #         '1': {
-        #             'name': uuid_name_List[0][1],
-        #             'uuid': uuid_name_List[0][0],
-        #         },
-        #         '2': {
-        #             'name': uuid_name_List[1][1],
-        #             'uuid': uuid_name_List[1][0],
-        #         }
-        #     }
-        # }
