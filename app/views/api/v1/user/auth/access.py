@@ -23,10 +23,9 @@ class TokenCheckManagement(BaseResource):
 
         user = UserModel.objects(id=user_identity).first()
 
-
         if user is None:
             abort(406)
 
         return {
             'user_id': user['id']
-        }
+        }, 201

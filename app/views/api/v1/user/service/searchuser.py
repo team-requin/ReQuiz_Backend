@@ -32,30 +32,23 @@ class UserSearchManagement(BaseResource):
         for q in QList:
             uuid_name_List.append((q['uuid'], q['name']))
 
-        Return_Str = str(
-            {
-                'user': {
-                    'id': user['id'],
-                    'name': user['name'],
-                }
-            },
-        )
+        Return_Str = """{'user': { 'id': '"""+ user['id']+"""','name':'"""+user['name']+"""'}"""
 
-        Return_Str = Return_Str + str(' workbook : ')
+
+        Return_Str = Return_Str + str(', \'workbook\' : {')
 
         while True:
             if not uuid_name_List:
                 break
             else:
-                Return_Str = Return_Str + str(
-                    {
-                        a : {
-                            'name': uuid_name_List[0][1],
-                            'uuid': uuid_name_List[0][0],
-                        },
-                    }
-                )
+                Return_Str = Return_Str + "'" + str(a) + "'" + """: {'name': '"""+uuid_name_List[0][1]\
+                             +"""','uuid': '"""+uuid_name_List[0][0]+"""'},"""
+
             del uuid_name_List[0]
             a += 1
+
+        Return_Str = Return_Str + str('}}')
+
+        print(Return_Str)
 
         return jsonify(Return_Str)
