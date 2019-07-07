@@ -12,6 +12,9 @@ api = Api(blueprint)
 
 @api.resource('/service/searchuser')
 class UserSearchManagement(BaseResource):
+    def hello(self):
+        return 'hello'
+
     @swag_from(SEARCH_USER_POST)
     def post(self):
         '''
@@ -25,25 +28,50 @@ class UserSearchManagement(BaseResource):
             abort(406)
 
         QList = QuestionModel.objects(user=search_user).all()
-        uuid_List = []
-        name_List = []
+        uuid_name_List = []
+
 
         for q in QList:
-            uuid_List.append(q['uuid'])
-            name_List.append(q['name'])
+            uuid_name_List.append((q['uuid'], q['name']))
 
-        # return {
-        #     'uuid': ", ".join(OList)
-        #        }, 201
+        while 1:
+            if q is not None:
+
 
         return {
             'user': {
                 'id': user['id'],
                 'name': user['name'],
             },
-            'workbook': {
+                'workbook': {
                 '1': {
-                    'name':None
-                }
+                    'name': uuid_name_List[0][1],
+                    'uuid': uuid_name_List[0][0],
+                },
             }
+        } if q is not None else {
+            'WTF':'WTWTF!'
         }
+
+
+        # def mk_json():
+        #     return 'hello'
+        #
+        # return mk_json()
+
+        # return {
+        #     'user': {
+        #         'id': user['id'],
+        #         'name': user['name'],
+        #     },
+        #     'workbook': {
+        #         '1': {
+        #             'name': uuid_name_List[0][1],
+        #             'uuid': uuid_name_List[0][0],
+        #         },
+        #         '2': {
+        #             'name': uuid_name_List[1][1],
+        #             'uuid': uuid_name_List[1][0],
+        #         }
+        #     }
+        # }
