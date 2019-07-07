@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30b5a900-4003-4f17-ba58-a133d6d45bb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py" afterDir="false" />
-    </list>
+    <list default="true" id="30b5a900-4003-4f17-ba58-a133d6d45bb4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,37 +11,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/auth/access.py">
+        <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py">
+        <entry file="file://$PROJECT_DIR$/test/SumOtherJson.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/updatelist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="462">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -156,12 +139,13 @@
         <option value="$PROJECT_DIR$/app/views/api/v1/user/service/updatelist.py" />
         <option value="$PROJECT_DIR$/app/views/api/v1/user/auth/access.py" />
         <option value="$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py" />
+        <option value="$PROJECT_DIR$/test/SumOtherJson.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="36" />
+    <option name="x" value="232" />
+    <option name="y" value="3" />
     <option name="width" value="978" />
     <option name="height" value="1050" />
   </component>
@@ -260,7 +244,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.server_run">
+  <component name="RunManager" selected="Python.SumOtherJson">
+    <configuration name="SumOtherJson" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ReQuiz_Backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/SumOtherJson.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="createlist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ReQuiz_Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -351,6 +357,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SumOtherJson" />
         <item itemvalue="Python.server_run" />
         <item itemvalue="Python.createlist" />
         <item itemvalue="Python.production_app" />
@@ -370,25 +377,24 @@
       <updated>1562158904258</updated>
       <workItem from="1562313207516" duration="1556000" />
       <workItem from="1562383994834" duration="2041000" />
-      <workItem from="1562491443506" duration="2145000" />
+      <workItem from="1562491443506" duration="3294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5742000" />
+    <option name="totallyTimeSpent" value="6891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22788204" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22788204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.38601398" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.273743" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -396,7 +402,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.27513966" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.13407822" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.13407822" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -425,6 +431,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ReQuiz_Backend$SumOtherJson.coverage" NAME="SumOtherJson Coverage Results" MODIFIED="1562494627420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/views/api/__init__.py">
@@ -589,11 +598,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="361">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/flask/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SumOtherJson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
         </state>
       </provider>
     </entry>
