@@ -17,38 +17,39 @@ class UserSearchManagement(BaseResource):
         '''
         유저 검색
         '''
+        Num = 0
+        append_Dict = dict()
+        uuid_name_List = list()
         search_user = request.json['search_id']
-
+        print(search_user)
         user = UserModel.objects(id=search_user).first()
+        QList = QuestionModel.objects(user=search_user).all()
 
         if user is None:
             abort(406)
 
-        QList = QuestionModel.objects(user=search_user).all()
-
-        uuid_name_List = []
-        a = 0
-
         for q in QList:
             uuid_name_List.append((q['uuid'], q['name']))
 
-        Return_Str = """{'user': { 'id': '"""+ user['id']+"""','name':'"""+user['name']+"""'}"""
-
-
-        Return_Str = Return_Str + str(', \'workbook\' : {')
+        Str = {
+            'user': {
+                'id': user['id'],
+                'name': user['name']
+            },
+            'workbook' : {
+            }
+        }
 
         while True:
             if not uuid_name_List:
                 break
+
             else:
-                Return_Str = Return_Str + "'" + str(a) + "'" + """: {'name': '"""+uuid_name_List[0][1]\
-                             +"""','uuid': '"""+uuid_name_List[0][0]+"""'},"""
+                append_Dict[Num] = {'name': uuid_name_List[0][1], 'uuid': uuid_name_List[0][0]}
 
             del uuid_name_List[0]
-            a += 1
+            Num += 1
 
-        Return_Str = Return_Str + str('}}')
+        Str['workbook'] = dict(append_Dict)
 
-        print(Return_Str)
-
-        return jsonify(Return_Str)
+        return jsonify(Str)
