@@ -12,7 +12,7 @@ from app.models.question import QuestionModel
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
 
-@api.resource('/service/createlist')
+@api.resource('/service/create-list')
 class CreateListManagement(BaseResource):
     @jwt_required
     @swag_from(CREATE_Q_POST)

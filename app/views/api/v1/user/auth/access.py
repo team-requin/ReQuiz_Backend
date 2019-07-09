@@ -10,7 +10,7 @@ from app.views.api.v1.docs import ACCESS_POST
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
 
-@api.resource('/auth/token_access')
+@api.resource('/auth/token-access')
 class TokenCheckManagement(BaseResource):
     @jwt_required
     @swag_from(ACCESS_POST)

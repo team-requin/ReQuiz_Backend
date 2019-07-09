@@ -9,7 +9,7 @@ from app.models.question import QuestionModel
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
 
-@api.resource('/service/updatelist')
+@api.resource('/service/update-list')
 class updateQListManagement(BaseResource):
     @swag_from(UPDATE_Q_POST)
     def post(self):

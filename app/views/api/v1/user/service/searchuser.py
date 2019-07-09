@@ -10,7 +10,7 @@ from app.models.question import QuestionModel
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
 
-@api.resource('/service/search_user')
+@api.resource('/service/search-user')
 class UserSearchManagement(BaseResource):
     @swag_from(SEARCH_USER_POST)
     def post(self):
