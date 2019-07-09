@@ -13,45 +13,36 @@ class SearchUserManagement(BaseResource):
     def get(self):
         uuid = request.json['uuid']
         Quest = QuestionModel.objects(uuid=uuid).first()
-
-        print(Quest['question'][0]['WAHT OS THIS'])
+        Num = 0
+        append_Dict = dict()
+        QNA_LIST = list()
 
         if Quest is None:
             abort(406)
 
-        #
-        # for q in Quse:
-        #     uuid_name_List.append((q['uuid'], q['name']))
-        #
-        # {
-        #     0: {
-        #         'q': 'a1',
-        #         'a': 'a2'
-        #     }
-        # }
+        for q in Quest:
+            print(Quest['question'][q][0]['question'])
+            print(Quest['question'][q][0]['answer'])
+            QNA_LIST.append((Quest['question'][q][0]['question'],
+                             Quest['question'][q][0]['answer']))
 
-        # Str = {
-        #     'Question_list': {
-        #     },
-        # }
-        #
-        # append_Str = {
-        #     'Question_list': {
-        #         'q': Quest[{['q']}],
-        #         'a': user['name']
-        #     },
-        # }
-        #
-        # while True:
-        #     if not uuid_name_List:
-        #         break
-        #
-        #     else:
-        #         append_Dict[Num] = {'name': uuid_name_List[0][1], 'uuid': uuid_name_List[0][0]}
-        #
-        #     del uuid_name_List[0]
-        #     Num += 1
-        #
-        # Str['workbook'] = dict(append_Dict)
-        #
-        # return jsonify(Str)
+        Str = {
+            'Question_list': {
+            },
+        }
+
+        while True:
+            if not QNA_LIST:
+                break
+
+            else:
+                append_Dict[Num] = {'question': QNA_LIST[0][0], 'answer': QNA_LIST[0][1]}
+
+            del QNA_LIST[0]
+            Num += 1
+
+        Str['Question_list'] = dict(append_Dict)
+
+        print(Str)
+
+        return jsonify(Str)

@@ -25,7 +25,11 @@ class updateQListManagement(BaseResource):
         if model is None:
             abort(406)
 
-        a = {question:answer}
+        a = {
+                'question':question,
+                'answer':answer,
+            },
+
 
         model.question.append(a)
         model.save()
