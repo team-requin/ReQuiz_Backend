@@ -1,7 +1,6 @@
 from flask import Blueprint, request, abort, jsonify
 from flask_restful import Api
 
-from app.models.user import UserModel
 from app.models.question import QuestionModel
 from app.views import BaseResource
 
@@ -10,7 +9,7 @@ api = Api(blueprint)
 
 @api.resource('/service/search-question')
 class SearchUserManagement(BaseResource):
-    def get(self):
+    def post(self):
         uuid = request.json['uuid']
         Quest = QuestionModel.objects(uuid=uuid).first()
         Num = 0
@@ -20,14 +19,14 @@ class SearchUserManagement(BaseResource):
         if Quest is None:
             abort(406)
 
-        for q in Quest:
-            print(Quest['question'][q][0]['question'])
-            print(Quest['question'][q][0]['answer'])
-            QNA_LIST.append((Quest['question'][q][0]['question'],
-                             Quest['question'][q][0]['answer']))
+        for q in Quest['question']:
+            QNA_LIST.append((
+                q[0]['question'],
+                q[0]['answer']
+            ))
 
         Str = {
-            'Question_list': {
+            'list': {
             },
         }
 
@@ -41,8 +40,6 @@ class SearchUserManagement(BaseResource):
             del QNA_LIST[0]
             Num += 1
 
-        Str['Question_list'] = dict(append_Dict)
-
-        print(Str)
+        Str['list'] = dict(append_Dict)
 
         return jsonify(Str)

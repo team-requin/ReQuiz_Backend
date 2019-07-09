@@ -21,7 +21,6 @@ class UserSearchManagement(BaseResource):
         append_Dict = dict()
         uuid_name_List = list()
         search_user = request.json['search_id']
-        print(search_user)
         user = UserModel.objects(id=search_user).first()
         QList = QuestionModel.objects(user=search_user).all()
 
