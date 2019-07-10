@@ -9,7 +9,7 @@ from app.views.api.v1.docs import CHECK_NAME_POST
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
 
-@api.resource('/auth/samename')
+@api.resource('/auth/check-same-name')
 class CheckAccountNameManagement(BaseResource):
     @swag_from(CHECK_NAME_POST)
     def post(self):
