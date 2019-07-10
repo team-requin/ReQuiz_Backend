@@ -27,5 +27,8 @@ class TokenCheckManagement(BaseResource):
             abort(406)
 
         return {
-            'user_id': user['id']
+            'user_id': user['id'],
+            'user_name': user['name'],
+            'user_level': user['level'],
+            'user_exp': user['exp'],
         }, 201

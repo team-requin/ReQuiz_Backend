@@ -33,6 +33,8 @@ class RegisterManagement(BaseResource):
             id = id,
             pw = pw,
             name = name,
+            level = 1,
+            exp = 0,
         ).save()
 
         return '', 201
