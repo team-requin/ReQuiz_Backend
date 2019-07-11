@@ -17,6 +17,9 @@ class CreateListManagement(BaseResource):
     @jwt_required
     @swag_from(CREATE_Q_POST)
     def post(self):
+        '''
+        문제 테이블 생성
+        '''
         user_identity = get_jwt_identity()
 
         quest_name = request.json['quest_name']

@@ -44,7 +44,7 @@ class Config:
             'description': ''
         },
 
-        'host': '0.0.0.0',
+        'host': 'ec2-15-164-169-0.ap-northeast-2.compute.amazonaws.com',
         'basePath': '/ '
     }
 

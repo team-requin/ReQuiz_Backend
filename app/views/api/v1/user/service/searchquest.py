@@ -1,6 +1,8 @@
 from flask import Blueprint, request, abort, jsonify
 from flask_restful import Api
+from flasgger import swag_from
 
+from app.views.api.v1.docs import SEARCH_Q_POST
 from app.models.question import QuestionModel
 from app.views import BaseResource
 
@@ -9,7 +11,11 @@ api = Api(blueprint)
 
 @api.resource('/service/search-question')
 class SearchUserManagement(BaseResource):
+    @swag_from(SEARCH_Q_POST)
     def post(self):
+        '''
+        질문 검색
+        '''
         uuid = request.json['uuid']
         Quest = QuestionModel.objects(uuid=uuid).first()
         Num = 0

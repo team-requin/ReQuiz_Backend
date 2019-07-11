@@ -124,7 +124,7 @@ CHECK_ACCOUNT_POST = {
     ],
     'responses': {
         '201': {
-                'description': '등록 되지 않은 ID',
+            'description': '등록 되지 않은 ID',
             },
         '406': {
             'description': '이미 등록된 ID',
@@ -159,16 +159,27 @@ CREATE_Q_POST = {
     'tags': ['Service'],
     'parameters': [
         {
-            'name': 'TOKEN',
-            'in': 'token',
+            'name': 'Bearer token',
+            'description': 'JWT',
+            'in': 'JWT',
             'type': 'str',
-            'required': True
-        }
+            'required': True,
+        },
+        {
+            'name': 'quest_name',
+            'description': '만들 문제 이름',
+            'in': 'json',
+            'type': 'str',
+            'required': True,
+        },
     ],
     'responses': {
         '201': {
-            'JUSTCHECK': '확인후 반환',
-        }
+            'description': '문제 생성 성공',
+        },
+        '406': {
+            'description': '존재하지 않는 아이디',
+        },
     }
 }
 
@@ -177,15 +188,30 @@ UPDATE_Q_POST = {
     'tags': ['Service'],
     'parameters': [
         {
-            'name': 'Question , Answer',
+            'name': 'uuid',
+            'description': '문제의 uuid',
             'in': 'json',
             'type': 'str',
-            'required': True
-        }
+            'required': True,
+        },
+        {
+            'name': 'question',
+            'description': '만들 문제 질문',
+            'in': 'json',
+            'type': 'str',
+            'required': True,
+        },
+        {
+            'name': 'answer',
+            'description': '만들 문제 답',
+            'in': 'json',
+            'type': 'str',
+            'required': True,
+        },
     ],
     'responses': {
         '201': {
-            'JUSTCHECK': '확인후 반환',
+            'description': '문제 업데이트 성공',
         }
     }
 }
@@ -195,15 +221,80 @@ SEARCH_USER_POST = {
     'tags': ['Service'],
     'parameters': [
         {
-            'name': 'Name',
+            'name': 'search_id',
+            'description': '검색할 유저 ID',
             'in': 'json',
             'type': 'str',
-            'required': True
-        }
+            'required': True,
+        },
     ],
     'responses': {
         '201': {
-            'Any':'Types',
+            'description': '검색 성공',
+            'examples': {
+                "user": {
+                    "id": "admin",
+                    "name": "Admin"
+                },
+                "workbook": {
+                    "0": {
+                        "name": "test1",
+                        "uuid": "12668"
+                    },
+                    "1": {
+                        "name": "test2",
+                        "uuid": "45130"
+                    },
+                    "2": {
+                        "name": "test3",
+                        "uuid": "51529"
+                    },
+                    "3": {
+                        "name": "test3",
+                        "uuid": "30106"
+                    }
+                }
+            }
+        },
+        '406': {
+            'description': '존재하지 않는 유저',
+        }
+    }
+}
+
+SEARCH_Q_POST = {
+    'tags': ['Service'],
+    'parameters': [
+        {
+            'name': 'uuid',
+            'description': '검색할 UUID',
+            'in': 'json',
+            'type': 'str',
+            'required': True,
+        },
+    ],
+    'responses': {
+        '200': {
+            'description': '검색 성공',
+            'examples': {
+                "list": {
+                    "0": {
+                        "answer": "Atest1",
+                        "question": "Qtest1"
+                    },
+                    "1": {
+                        "answer": "Atest2",
+                        "question": "Qtest2"
+                    },
+                    "2": {
+                        "answer": "Atest3",
+                        "question": "Qtest3"
+                     }
+                 }
+            }
+        },
+        '406': {
+            'description': '존재하지 않는 uuid',
         }
     }
 }
