@@ -8,6 +8,7 @@ from app.views import BaseResource
 
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)
+# api.prefix('/service')
 
 @api.resource('/service/search-question')
 class SearchUserManagement(BaseResource):
@@ -18,6 +19,7 @@ class SearchUserManagement(BaseResource):
         '''
         uuid = request.json['uuid']
         Quest = QuestionModel.objects(uuid=uuid).first()
+        name = QuestionModel.objects(uuid=uuid).first()
         Num = 0
         append_Dict = dict()
         QNA_LIST = list()
@@ -32,6 +34,7 @@ class SearchUserManagement(BaseResource):
             ))
 
         Str = {
+            'name': str(name['name']),
             'list': {
             },
         }
