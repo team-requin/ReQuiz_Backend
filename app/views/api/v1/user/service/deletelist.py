@@ -28,5 +28,4 @@ class DeleteQuestionManagement(BaseResource):
         if not quest_uuid['name'] == user_id:
             abort(409)
 
-
         pass
