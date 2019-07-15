@@ -290,7 +290,8 @@ SEARCH_Q_POST = {
                         "answer": "Atest3",
                         "question": "Qtest3"
                      }
-                 }
+                 },
+                "title": "TESTTITLE"
             }
         },
         '406': {

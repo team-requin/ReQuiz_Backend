@@ -19,7 +19,7 @@ class Router:
         app.register_blueprint(checksameaccount.api.blueprint)
         app.register_blueprint(edituser.api.blueprint)
 
-        from app.views.api.v1.user.service import createlist, updatelist, searchuser, searchquest,re_create_list
+        from app.views.api.v1.user.service import searchuser, searchquest,re_create_list
         # app.register_blueprint(createlist.api.blueprint)
         # app.register_blueprint(updatelist.api.blueprint)
         app.register_blueprint(searchuser.api.blueprint)

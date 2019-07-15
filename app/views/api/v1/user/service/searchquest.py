@@ -29,14 +29,14 @@ class SearchUserManagement(BaseResource):
 
         for q in Quest['question']:
             QNA_LIST.append((
-                q[0]['question'],
-                q[0]['answer']
+                Quest['question'][q]['question'],
+                Quest['question'][q]['answer']
             ))
 
         Str = {
-            'name': str(name['name']),
+            'title': str(name['name']),
             'list': {
-            },
+            }
         }
 
         while True:
