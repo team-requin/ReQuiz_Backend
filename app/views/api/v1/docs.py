@@ -298,3 +298,41 @@ SEARCH_Q_POST = {
         }
     }
 }
+
+CREATE_RE_Q_POST = {
+    'tags': ['Service'],
+    'parameters': [
+        {
+            'name': 'uuid',
+            'description': '접근할 uuid 만약 없을시 새로 생성',
+            'in': 'json',
+            'type': 'str',
+            'required': True,
+        },
+        {
+            'name': 'title',
+            'description': '만들 문제의 제목',
+            'in': 'json',
+            'type': 'str',
+            'required': True,
+        },
+        {
+            'name': 'list',
+            'description': '수정하거나 만들 문제',
+            'in': 'json',
+            'type': 'str',
+            'required': True,
+        },
+    ],
+    'responses': {
+        '201': {
+            'description': '문제 생성 또는 업데이트 성공',
+            'examples': {
+                "uuid": "12345"
+            }
+        },
+        '406': {
+            'description': '존재하지 않는 유저',
+        }
+    }
+}

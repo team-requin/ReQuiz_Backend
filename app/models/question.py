@@ -9,7 +9,7 @@ class QuestionModel(Document):
 
     name = StringField()
 
-    question = ListField(
+    question = DictField(
         n = DictField(
             q = StringField(),
             a = StringField(),

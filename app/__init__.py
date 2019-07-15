@@ -8,7 +8,7 @@ from app.misc.log import log
 from app.views import Router
 from config import Config
 
-def create_app(*config_cls):
+def create_app(*config_cls) -> Flask:
 
     log(message='Flask application initialized with {}'.format(', '.join([config.__name__ for config in config_cls])),
         keyword='INFO')
