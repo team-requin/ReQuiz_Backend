@@ -4,19 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/misc/log.py" line="13" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30b5a900-4003-4f17-ba58-a133d6d45bb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/auth/access.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/auth/access.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/auth/checksameaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/auth/checksameaccount.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/auth/checksamename.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/auth/checksamename.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/auth/edituser.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/auth/edituser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/auth/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/auth/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/auth/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/auth/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/service/deletelist.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/service/deletelist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/service/re_create_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/service/re_create_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/service/searchquest.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/service/searchquest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/v1/user/service/searchuser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_run.py" afterDir="false" />
-    </list>
+    <list default="true" id="30b5a900-4003-4f17-ba58-a133d6d45bb4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server_run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -78,6 +66,15 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -115,27 +112,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/re_create_list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/searchquest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -164,7 +140,6 @@
         <option value="$PROJECT_DIR$/app/views/api/v1/user/service/userinfo.py" />
         <option value="$PROJECT_DIR$/app/views/api/v1/user/service/createlist.py" />
         <option value="$PROJECT_DIR$/test/test.py" />
-        <option value="$PROJECT_DIR$/../../test.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/views/api/v1/user/service/updatelist.py" />
         <option value="$PROJECT_DIR$/app/models/question.py" />
@@ -183,11 +158,13 @@
         <option value="$PROJECT_DIR$/app/views/api/v1/user/auth/register.py" />
         <option value="$PROJECT_DIR$/app/views/api/v1/user/auth/checksameaccount.py" />
         <option value="$PROJECT_DIR$/server_run.py" />
+        <option value="$PROJECT_DIR$/../../test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
+    <option name="x" value="462" />
+    <option name="y" value="-14" />
     <option name="width" value="975" />
     <option name="height" value="1050" />
   </component>
@@ -241,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.server_run">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Minki" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ReQuiz_Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -350,9 +327,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.server_run" />
         <item itemvalue="Python.re_create_list" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.searchquest" />
         <item itemvalue="Python.Minki" />
       </list>
@@ -379,15 +356,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33509582" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11103767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.29278642" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.2923077" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -477,13 +455,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/userinfo.py" />
     <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/createlist.py" />
-    <entry file="file://$PROJECT_DIR$/../../test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/v1/user/service/updatelist.py" />
     <entry file="file://$PROJECT_DIR$/test/test.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -644,6 +615,20 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PYTHON_BASH/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>
