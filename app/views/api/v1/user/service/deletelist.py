@@ -17,7 +17,7 @@ class DeleteQuestionManagement(BaseResource):
         user_id = get_jwt_identity()
 
         uuid = request.json['uuid']
-
+        
         user = UserModel.objects(id = user_id).first()
 
         if user is None:
@@ -27,5 +27,3 @@ class DeleteQuestionManagement(BaseResource):
 
         if not quest_uuid['name'] == user_id:
             abort(409)
-
-        pass

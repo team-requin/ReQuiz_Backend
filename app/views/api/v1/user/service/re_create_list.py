@@ -2,9 +2,8 @@ from flask import Blueprint, abort, request
 from flask_restful import Api
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from flasgger import swag_from
-# import random
 
-from app.views.api.v1.docs import CREATE_RE_Q_POST
+from app.views.api.v1.docs import CREATE_Q_POST
 from app.views import BaseResource
 from app.models.user import UserModel
 from app.models.question import QuestionModel
@@ -15,7 +14,7 @@ api = Api(blueprint)
 @api.resource('/service/create-list')
 class CreateListManagement(BaseResource):
     @jwt_required
-    @swag_from(CREATE_RE_Q_POST)
+    @swag_from(CREATE_Q_POST)
     def post(self):
         '''
         문제 테이블 생성 및 수정
@@ -33,14 +32,8 @@ class CreateListManagement(BaseResource):
         if user is None:
             abort(406)
 
-        if find is None:
-            # while True:
-            #     uuid = str(random.randrange(11111,99999))
-            #     check_uuid = QuestionModel.objects(uuid=uuid).first()
-            #
-            #     if check_uuid is None:
-            #         break
 
+        if find is None:
             quest = {}
 
             for a in quest_list:
@@ -67,6 +60,7 @@ class CreateListManagement(BaseResource):
                 }
 
             find.update(question=quest)
+
 
         return {
             'uuid': quest_uuid

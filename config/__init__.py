@@ -12,11 +12,6 @@ class Config:
     MONGO_ID = ''
     MONGO_PW = ''
 
-    # SQL_HOST = _LOCALHOST
-    # SQL_PORT = 27017
-    # SQL_ID = None
-    # SQL_PW = None
-
     SECRET_KEY = 'THISISSECRETKEY'
 
     RUN_SETTINGS = {

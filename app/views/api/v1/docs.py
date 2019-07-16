@@ -155,68 +155,6 @@ CHECK_NAME_POST = {
 }
 
 
-CREATE_Q_POST = {
-    'tags': ['Service'],
-    'parameters': [
-        {
-            'name': 'Bearer token',
-            'description': 'JWT',
-            'in': 'JWT',
-            'type': 'str',
-            'required': True,
-        },
-        {
-            'name': 'quest_name',
-            'description': '만들 문제 이름',
-            'in': 'json',
-            'type': 'str',
-            'required': True,
-        },
-    ],
-    'responses': {
-        '201': {
-            'description': '문제 생성 성공',
-        },
-        '406': {
-            'description': '존재하지 않는 아이디',
-        },
-    }
-}
-
-
-UPDATE_Q_POST = {
-    'tags': ['Service'],
-    'parameters': [
-        {
-            'name': 'uuid',
-            'description': '문제의 uuid',
-            'in': 'json',
-            'type': 'str',
-            'required': True,
-        },
-        {
-            'name': 'question',
-            'description': '만들 문제 질문',
-            'in': 'json',
-            'type': 'str',
-            'required': True,
-        },
-        {
-            'name': 'answer',
-            'description': '만들 문제 답',
-            'in': 'json',
-            'type': 'str',
-            'required': True,
-        },
-    ],
-    'responses': {
-        '201': {
-            'description': '문제 업데이트 성공',
-        }
-    }
-}
-
-
 SEARCH_USER_POST = {
     'tags': ['Service'],
     'parameters': [
@@ -300,7 +238,8 @@ SEARCH_Q_POST = {
     }
 }
 
-CREATE_RE_Q_POST = {
+
+CREATE_Q_POST = {
     'tags': ['Service'],
     'parameters': [
         {
