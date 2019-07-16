@@ -2,8 +2,9 @@ from flask import Blueprint, request, abort, jsonify
 from flask_restful import Api
 from flasgger import swag_from
 
-from app.views.api.v1.docs import SEARCH_USER_POST
 from app.views import BaseResource
+from app.views.api.v1.docs import SEARCH_USER_POST
+
 from app.models.user import UserModel
 from app.models.question import QuestionModel
 

@@ -4,8 +4,9 @@ from flask_jwt_extended import create_access_token, create_refresh_token
 from flasgger import swag_from
 
 from app.views import BaseResource
-from app.models.user import UserModel
 from app.views.api.v1.docs import LOGIN_POST
+
+from app.models.user import UserModel
 
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)

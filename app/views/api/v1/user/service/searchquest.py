@@ -2,9 +2,10 @@ from flask import Blueprint, request, abort, jsonify
 from flask_restful import Api
 from flasgger import swag_from
 
-from app.views.api.v1.docs import SEARCH_Q_POST
-from app.models.question import QuestionModel
 from app.views import BaseResource
+from app.views.api.v1.docs import SEARCH_Q_POST
+
+from app.models.question import QuestionModel
 
 blueprint = Blueprint(__name__,__name__)
 api = Api(blueprint)

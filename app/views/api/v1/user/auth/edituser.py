@@ -2,8 +2,9 @@ from flask import Blueprint, request, abort
 from flask_restful import Api
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
-from app.models.user import UserModel
 from app.views import BaseResource
+
+from app.models.user import UserModel
 
 blueprint = Blueprint(__name__,__name__)
 

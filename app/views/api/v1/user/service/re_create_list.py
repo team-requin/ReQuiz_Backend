@@ -3,8 +3,9 @@ from flask_restful import Api
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from flasgger import swag_from
 
-from app.views.api.v1.docs import CREATE_Q_POST
 from app.views import BaseResource
+from app.views.api.v1.docs import CREATE_Q_POST
+
 from app.models.user import UserModel
 from app.models.question import QuestionModel
 

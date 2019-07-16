@@ -3,6 +3,7 @@ from flask_restful import Api
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
 from app.views import BaseResource
+
 from app.models.user import UserModel
 from app.models.question import QuestionModel
 
@@ -27,3 +28,5 @@ class DeleteQuestionManagement(BaseResource):
 
         if not quest_uuid['name'] == user_id:
             abort(409)
+
+        pass
