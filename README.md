@@ -1,3 +1,6 @@
+# docs
+http://api.teamrequin.kro.kr/swaggerdocs
+
 # ReQuiz_Backend
 
 ### Auth
@@ -5,6 +8,7 @@
 - [x]  로그인
 - [x]  레지스터
 - [x]  인증
+- [x]  동일 계정 찾기
 
 ### Service
 
