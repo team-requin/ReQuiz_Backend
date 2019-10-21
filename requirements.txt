@@ -80,6 +80,6 @@ tox==3.12.1
 unicorn==1.0.1
 urllib3==1.24.3
 virtualenv==16.6.0
-Werkzeug==0.15.0
+Werkzeug==0.15.3
 WTForms==2.2.1
 zipp==0.5.1
