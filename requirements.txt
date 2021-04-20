@@ -46,7 +46,7 @@ pluggy==0.12.0
 promise==2.2.1
 psutil==5.6.2
 psycopg2==2.8.3
-py==1.8.0
+py==1.10.0
 pyasn1==0.4.5
 pycparser==2.19
 pydantic==0.29
